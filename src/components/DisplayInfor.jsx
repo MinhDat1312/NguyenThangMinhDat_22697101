@@ -10,7 +10,9 @@ const DisplayInfor = (props) => {
 
     useEffect(()=>{
         if(listUser.length == 0){
-            alert("Bạn đã xóa hết user")
+            setTimeout(()=>{
+                alert("Bạn đã xóa hết user")
+            }, 0)
         }
     },[listUser])
 
