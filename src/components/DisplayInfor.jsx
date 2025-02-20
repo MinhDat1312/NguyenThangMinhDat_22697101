@@ -8,6 +8,11 @@ const DisplayInfor = (props) => {
         setShowHide(!showHide)
     }
 
+    useEffect(()=>{
+        if(listUser.length == 0){
+            alert("Bạn đã xóa hết user")
+        }
+    },[listUser])
 
     return (<>
         <span onClick={()=>handleShowHide()} style={{cursor: "pointer"}}>
