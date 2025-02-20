@@ -24,12 +24,16 @@ const Mycomponent = () => {
         setListUser(listUserClone)
     }
 
+    const handleDeleteAllUser = () => {
+        setListUser([])
+    }
+
     return <>
         <div>
             <AddUserInfor handleAddNewUser={handleAddNewUser}></AddUserInfor>
         </div>
         <div>
-            <DisplayInfor listUser={listUser} handleDeleteUser={handleDeleteUser}></DisplayInfor>
+            <DisplayInfor listUser={listUser} handleDeleteUser={handleDeleteUser} handleDeleteAllUser={handleDeleteAllUser}></DisplayInfor>
         </div>
     </>
 }
